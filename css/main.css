@@ -33,28 +33,28 @@ header img {
 }
 
 header h1 {
-    margin: 20px;
-    text-shadow: 2px 2px 30px white;
+  margin: 20px;
+  text-shadow: 2px 2px 30px white;
 }
 
 footer {
   background-color: navy;
   color: #fff;
   text-align: center;
-  padding-top: 10px ;
+  padding-top: 10px;
   border-radius: 25px 25px 25px 25px;
   box-shadow: 0px 0px 30px gray;
 }
 
 main section h2 {
-    border-bottom: 2px solid black;
-    margin: 10px;
+  border-bottom: 2px solid black;
+  margin: 10px;
 }
 
 main section p {
-    text-align: left;
-    border-top: 2px solid black;
-    margin: 10px;
+  text-align: left;
+  border-top: 2px solid black;
+  margin: 10px;
 }
 
 footer p {
