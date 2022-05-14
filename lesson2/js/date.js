@@ -1,4 +1,6 @@
 /*Last date modified code*/
+const d = new Date();
+document.getElementById("demo").innerHTML = d;
 const lastmodified = document.querySelector("#lastmodified");
 lastmodified.innerHTML = `Last Updated: ${document.lastModified}
 //Get year code
