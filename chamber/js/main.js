@@ -2,7 +2,8 @@ const navBtn = document.querySelector("#nav-btn");
 const navEl = document.querySelector("nav");
 const dateEl = document.querySelector("#header-date");
 const footerEl = document.querySelector("#footer-year")
-const modEl = document.querySelector(".last-modification")
+const modEl = document.querySelector(".last-modification");
+const banner = document.querySelector(".banner");
 
 navBtn.addEventListener("click", function(){
     navEl.classList.toggle("open")
@@ -21,7 +22,7 @@ const curYear = curDate.getFullYear()
 
 dateEl.innerHTML = `${curDay()}, ${curDayofMonth} ${curMonth()} ${curYear}`;
 
-footerEl.innerHTML = `&copy${curYear} MainLand Valley Chamber`
+footerEl.innerHTML = `&copy${curYear} MainLand Valley Chamber of Commerce`
 
 const lastModifiedDate = new Date(document.lastModified)
 
@@ -33,3 +34,9 @@ let modsecond = lastModifiedDate.getSeconds()
 let modhour = lastModifiedDate.getHours(); 
 
 modEl.innerHTML = `Last Updated: ${modMonth}/${modDay}/${modYear} ${modhour}:${modminute}:${modsecond}`
+
+if(curDay() == "Monday" || curDay() == "Tuesday"){
+    banner.classList.remove("hide")
+}else{
+    banner.classList.add("hide")
+}

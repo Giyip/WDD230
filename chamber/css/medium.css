@@ -3,10 +3,16 @@
         display: grid;
         grid-template-columns: 60% 1fr;
         grid-template-rows: repeat(5, 1fr);
+        padding: 2rem;
     }
 
     .hero {
         grid-column: 1/3;
+        width: 100%;
+    }
+
+    .hero button{
+        right: 10%;
     }
 
     .news {
@@ -17,19 +23,51 @@
     .placeholder-spotlights {
         grid-row: 3/4;
         grid-column: 1/3;
-        display: flex;
-        flex-direction: row;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
     }
 
     .spotlight {
         width: 100%;
-        margin: 10px;
+        margin: 5px;
+    }
+
+    .spotlight img {
+        width: 100%;
+    }
+
+    .join button {
+        background-color: #45494E;
+        padding: 1rem;
+        width: 100%;
+        color: orange;
+        box-shadow: 0px 0px 5px black;
     }
 
     .join {
-        display: block;
+        width: 100%;
+        display: grid;
+        grid-template-rows: 4rem 1fr;
+        align-items: center;
+        justify-items: center;
         grid-column: 1/3;
         grid-row: 4/5;
+        background: url("../images/background.jpg") rgba(13, 12, 27, 0.938);
+        background-blend-mode: soft-light;
+        background-size: cover;
+    }
+
+    .join button:hover {
+        background-color: #0B7AB8;
+        font-weight: bolder;
+    }
+
+    .join p {
+        text-align: center;
+        font-size: larger;
+        color: whitesmoke;
+        width: 70%;
     }
 
     .first-half {
@@ -64,5 +102,11 @@
 
     .second-half span {
         padding: 0px 4px 0px 4px;
+    }
+
+    .news{
+        grid-column: 1/3;
+        grid-row:5/6;
+        width: 100%;
     }
 }
