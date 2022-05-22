@@ -1,31 +1,29 @@
-const list = document.querySelector("#favList");
-const input = document.querySelector("#fav");
-const button = document.querySelector("#submitFav");
+const listEl = document.querySelector("#favList");
+const inputEl = document.querySelector("#fav");
+const addBtn = document.querySelector("#submitFav");
 
-button.onclick = function() {
-    let myItem = input.value;
-    if (myItem == "") {
 
-        return;
-    } else {
-        input.value = "";
-
-        const listItem = document.createElement("li");
-        const listText = document.createElement("p");
-        const listBtn = document.createElement("span");
-
-        listItem.appendChild(listText);
-        listText.textContent = myItem;
-        listItem.appendChild(listBtn);
-        listBtn.textContent = "❌";
-        list.appendChild(listItem);
-
-        listBtn.onclick = function(e) {
-            list.removeChild(listItem);
-        };
-
-        input.focus();
-
-    }
+const runList = function() {
+    if(inputEl.value != ""){ 
+    const value = inputEl.value;
+    inputEl.value ="";
+    const listItem = document.createElement("li");
+    const span = document.createElement("span");
+    const btn = document.createElement("button");
+    listItem.appendChild(span);
+    listItem.appendChild(btn);
+    span.textContent = value;
+    btn.textContent = "❌";
+    listEl.appendChild(listItem);
+    btn.setAttribute("aria-label", `Close ${value}`)
+    btn.addEventListener("click", function(){
+        listItem.remove();
+        inputEl.focus();
+    });
+    inputEl.focus();
+};
 
 };
+
+addBtn.addEventListener("click", runList);
+document.addEventListener("keydown", (e) => e.key == "Enter"? runList() : "");
