@@ -48,6 +48,16 @@
         <div class="banner hide"><p>🤝🏼 Come join us for the chamber meet and greet Wednesday at 7:00 p.m.</p></div>
     </header>
     <main>
+        <div class="block hero" id="hero">
+            <picture id="heroPhoto"> <img src="images/hero-base.jpg" alt="Chamber members in meeting" sizes="50ww"
+                    srcset="images/hero-small.jpg 370w, 
+                            images/hero-medium.jpg 820w, 
+                            images/hero-large.jpg 1000w,"
+                            >
+            </picture>
+        <div class="block hero" id="hero">
+            <picture id="heroPhoto"> 
+                <img src="images/hero-base.jpg"
         <div class="block hero">
             <h2>Welcome to the <span>MainLand Valley</span></h2>
             <button>Join the Chamber</button>
@@ -59,10 +69,12 @@
         </div>
         <div class="block weather sub">
             <h2>Weather</h2>
-            <img src="images/sunny.png" alt="sunny icon">
-            <h3>28 °C</h3>
+            <img id="icon" src="images/weather.png" alt="weather icon" loading="lazy">
+            <p><span id="temp"></span>°C</p>
             <hr>
-            <p>Wind Speed:<span>2.5 km/h</span></p>
+            <p id="icon-desc"></p>
+            <p id="chill-output"></p>
+            <p>Wind Speed: <span id="speed"></span>km/h</p>
             <p>Wind Chill:<span>N/A</span></p>
         </div>
         <div class="block join">
@@ -124,6 +136,7 @@
         </div>
     </footer>
     <script src="js/main.js"></script>
+    <script src="js/windchill.js"</script>
 </body>
 
 </html>
