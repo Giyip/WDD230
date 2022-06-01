@@ -1,4 +1,4 @@
-@media only screen and (min-width: 40rem) {
+@media only screen and (min-width: 35rem) {
     main {
         display: grid;
         grid-template-columns: 60% 1fr;
@@ -8,7 +8,7 @@
     }
     
     .block{
-        margin: 0px:
+        margin: 0px;
     }
 
     .hero {
