@@ -50,79 +50,47 @@
             <p>🤝🏼 Come join us for the chamber meet and greet Wednesday at 7:00 p.m.</p>
         </div>
     </header>
-    <main id="discovermain">
-        <div class="top">
-            <h2>Join MainLand valley Special Club</h2>
-            <p>
-                MainLand valley is much more fun and interesting when you join our club.
-                Signup today for MainLand Valley Special Club and gain access to amazing
-                services available for premium member
-            </p>
-        </div>
-
-        <section id="form">
-            <h3>MainLand Valley Special Club Application Form</h3>
-
-            <form action="thankyou.html" method="get">
-                <label class="blockview">First Name
-                    <input type="text" placeholder="First name" name="fname" required /></label>
-                <label class="blockview">Last Name
-                    <input type="text" placeholder="Last name" name="lname" required /></label>
-
-                <label class="blockview">Business Position
-                    <input type="text" name="position" pattern="^[A-Za-z -]{7,}$" /></label>
-
-                <label class="blockview">Email
-                    <input type="email" name="email" placeholder="someone@example.com" required /></label>
-                <label class="blockview">Phone Number <input type="tel" name="tel" required /></label>
-                <label class="blockview">Business Name <input type="text" name="businessname" required /></label>
-
-                <div id="membership">
-                    <div class="mtitle">Membership Level</div>
-
-                    <div>
-                        <label class="sbs"><input id="free" type="radio" name="membership" />NP
-                            Membership</label>
-                        <label class="sbs"><input id="bronze" type="radio" name="membership" />Bronze
-                            Membership</label>
-                        <label class="sbs"><input id="silver" type="radio" name="membership" />Silver
-                            Membership</label>
-                        <label class="sbs"><input id="gold" type="radio" name="membership" />Gold
-                            Membership</label>
-                    </div>
-
-                    <div class="benefit">
-                        <h5>Price: <span id="price"></span></h5>
-                        <table>
-                            <tr>
-                                <th>Benefits:</th>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td id="one">Website Ads</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td id="two">Free Meal</td>
-                            </tr>
-
-                            <tr>
-                                <td></td>
-                                <td id="three">Website Ads</td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-
-                <label class="blockview">Business Description
-                    <textarea name="description" rows="4" cols="50"></textarea>
-                </label>
-                <input type="hidden" id="time" name="time" />
-
-                <input id="submitBtn" type="submit" value="Join Club" />
-            </form>
-        </section>
+    <main>
+        <div class="main-area main-join-area">
+        <h1 class="abel-text">Join us at Island of Victoria!</h1>
+        <p class="abel-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur provident voluptatibus nisi unde necessitatibus totam nemo laboriosam, natus perferendis at inventore fuga reprehenderit voluptatum! Hic quam est saepe delectus aperiam?
+        </p>
+        <form class="abel-text form" method="GET" action="thanks.html">
+            <fieldset>
+                <legend>Basic Information</legend>
+                <label class="block-text">First Name<span class="hy">*</span>
+                <input class="block-input" type="text" name="fname" required></label>
+                <label class="block-text">Last Name<span class="hy">*</span>
+                <input class="block-input" type="text" name="lname" required></label>
+                <label class="block-text">Business Position
+                <input class="block-input" type="text" name="Position"
+                title="Can only include alpha characters, hyphens, and spaces and must contain a minimum of 7 characters" pattern="[A-Za-z -]{7,}"></label>
+                <label class="block-text">Email<span class="hy">*</span>
+                <input placeholder=" someone@email.com" class="block-input" type="email" name="email" required></label>
+                <label class="block-text">Telephone<span class="hy">*</span>
+                <input class="block-input" type="tel" name="phone" required></label>
+                <label class="block-text">Business Name/Title<span class="hy">*</span>
+                <input class="block-input" name="business" type="text" required></label>
+            </fieldset>
+            <fieldset>
+                <legend>Membership</legend>
+                <div>Membership Level</div>
+                <label  class="block-radio"><input type="radio" name="membership" value="np"> NP Membership</label>
+                <label  class="block-radio"><input type="radio" name="membership" value="bronze"> Bronze Membership</label>
+                <label  class="block-radio"><input type="radio" name="membership" value="silver"> Silver Membership</label>
+                <label  class="block-radio"><input type="radio" name="membership" value="gold"> Gold Membership</label>
+            </fieldset>
+            <label  class="block-text">
+                Business Description
+                <textarea id="description" class="block-input"></textarea>
+            </label>
+            <label><input type="hidden" value="curdateandtime" id="curtime"></label>
+            <input class="join-btn" type="submit" value="Join The Chamber">
+            
+        </form>
+        <h4 class="last-visit abel-text">Last Visit: <span id="visit-string"></span></h4>
+    </div>
     </main>
     <footer>
         <div class="first-half">
