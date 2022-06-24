@@ -63,7 +63,7 @@ button span {
     /*background-position: center;*/
     /*background-size: cover;*/
     display: grid;
-    grid-template-columns: repeat(1fr 2);
+    grid-template-columns: repeat( 2);
     grid-template-rows: 60% 1fr;
     overflow: hidden;
 }
@@ -114,7 +114,7 @@ main div#hero{padding: 0px;}
 .weather {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr, 6rem, 1fr, 2px, 1.2fr;
+    grid-template-rows: 1fr 6rem 1fr 2px, 1.2fr;
     max-width: 15rem;
 }
 
@@ -463,6 +463,7 @@ nav ul {
 
 }
 
+
 .open ul {
     display: block;
 }
@@ -530,6 +531,7 @@ footer {
     align-items: center;
     text-align: center;
     margin: 0;
+    grid-row: 1/-1;
 }
 
 .first-half {
@@ -574,4 +576,38 @@ nav ul li a:hover,
 
 button span:hover {
      color: #f1e8d4;
+}
+/* Directory Page */
+.company{
+  display: grid;
+  justify-items: center;
+  padding:2.5rem;
+  text-align: center;
+}
+main{
+  grid-row: 1/-1;
+}
+.company-img{
+  width: 180px;
+}
+.company:nth-child(even){
+  background-color: #555;
+  color: whitesmoke;
+}
+.company ul{
+  list-style-type: none;
+  padding: 0px;
+}
+
+.NP {
+  filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(87deg) brightness(70%) contrast(119%);
+}
+.Silver {
+  filter: invert(42%) sepia(93%) saturate(100%) hue-rotate(50deg) brightness(100%) contrast(50%);
+}
+.Gold {
+  filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(10deg) brightness(119%) contrast(119%);
+}
+.Bronze {
+  filter: invert(42%) sepia(180%) saturate(202%) hue-rotate(0deg) brightness(119%) contrast(119%);
 }
