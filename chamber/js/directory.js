@@ -1,4 +1,4 @@
-const directoryUrl = "https://kelvin-aj.github.io/wdd230/chamber/json/data.json";
+const directoryUrl = "https://giyip.github.io/wdd230/chamber/json/data.json";
 const directoryCont = document.querySelector(".directory-container");
 
 async function getandshowDirectory() {
@@ -9,8 +9,8 @@ async function getandshowDirectory() {
 
     directoryCont.innerHTML = "";
     directory.forEach((company) => {
-        directoryCont.insertAdjacentHTML("beforeend", 
-        `
+        directoryCont.insertAdjacentHTML("beforeend",
+            `
                     <div class="company abel-text">
                         <img class="company-img" src="${company.logoURL}" loading="lazy" alt="logo of ${company.name}">
                         <div class="company-info">
