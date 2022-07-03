@@ -52,7 +52,7 @@ const curHour = curDate.getHours;
 
 dateEl.innerHTML = `${curDay()}, ${curDayofMonth} ${curMonth()} ${curYear}`;
 
-footerEl.innerHTML = `&copy${curYear} Island of Victoria Chamber`
+footerEl.innerHTML = `&copy${curYear} MainLand Valley Chamber`
 
 const lastModifiedDate = new Date(document.lastModified)
 
