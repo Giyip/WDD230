@@ -18,6 +18,11 @@
         grid-row: 2/3;
         grid-column: 1/3;
     }
+    .numbers{ 
+        color:white;
+        font-size: larger;
+    }
+    
     .weather p{
         grid-column: 1/3;
         margin: 3px;
@@ -31,7 +36,7 @@
         display: grid;
        grid-template-columns: repeat(2, 1fr);
        height: 16rem;
-       width: 100%;
+       width: 95%;
 
     }
 
@@ -40,18 +45,17 @@
      margin: 5px;
      }
             
-     .spotlight img {
-     width: 70%;
-    }
-    .join button {
+    .join a {
     background-color: #45494E;
     padding: 1rem;
-    width: 100%;
+    width: 95%;
     color: orange;
     box-shadow: 0px 0px 5px black;
+    text-align: center;
+    text-decoration: none;
 }
     .join {
-        width: 100%;
+        width: 95%;
         display: grid;
     grid-template-rows: 4rem 1fr;
     align-items: center;
@@ -62,7 +66,7 @@
     background-blend-mode: soft-light;
      background-size: cover;
     }
-    .join button:hover {
+    .join a:hover {
     background-color: #0B7AB8;
     font-weight: bolder;
     }
@@ -93,10 +97,11 @@
     }
 
     .second-half {
-        display: flex;
+        flex-direction: row;
     }
 
     .second-half h2 {
+        
         margin: 0px;
         padding: 0px 4px 0px 4px;
         border-left: 2px solid whitesmoke;
@@ -115,17 +120,42 @@
 
     #gallery .right-photo{background-color: rgb(182, 182, 182);}
 
-    .company{
+
+
+    .grid-company{
         display: grid;
         justify-items: left;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 2rem;
+        margin: 20px;
+        box-shadow: 0px 0px 3px #141516;
+    }
+    .list-company{
+        display: grid;
+        grid-template-columns: 0.1fr 2fr;
+        
+    }
+    .list-company.company:nth-child(even){
+        background-color: #afb9c40a;
+    }
+    .list-info{
+        display: grid;
+        grid-template-columns: 0.9fr 1fr 1fr;
+        align-items: center;
+        gap: 10px;
+    }
+    .list-info ul{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+ 
+    .company{
+        
         padding:2.5rem;
         text-align: left;
         background-color: white;
         color: #141516;
-        margin: 20px;
-        box-shadow: 0px 0px 3px #141516;
+
     }
     .company-img{
         align-self: center;

@@ -7,7 +7,7 @@ body {
 }
 
 h1 {
-  font-size: 25px;
+  font-size: 2rem;
 }
 .abel-text{
   font-family: 'Abel', sans-serif;
@@ -26,6 +26,12 @@ h2 {
   color: #FFB30F;
   background-color: #042b423d;
   grid-column: 1/4;
+  display: flex;
+}
+.banner #hex{
+  margin-left: auto;
+  padding: 20px;
+  
 }
 .header-grid {
   display: grid;
@@ -101,6 +107,7 @@ nav ul li a {
   text-align: center;
   padding-top: 1rem;
   font-weight: bold;
+  transition:ease 0.5s;
 }
 
 nav ul {
@@ -113,9 +120,6 @@ main {
 }
 
 .hero {
-  /* background: url("../images/hero-large.jpg");
-  background-position: center;
-  background-size: cover; */
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 60% 1fr;
@@ -131,32 +135,54 @@ main div#hero{padding: 0px;}
 .hero h2,
 .sub h3 {
   font-size: 2rem;
-  color: whitesmoke;
+  color: white;
 }
 .hero h2{
   grid-column: 1/3;
   grid-row: 1/2;
   padding: 1rem;
+  background-color: #0000007c;
+  border-top: 1px solid #fab727;
+  animation-name: slidein;
+  animation-delay: 0.01s;
+  animation-iteration-count: 1;
+  animation-duration: 0.5s;
 }
 
 .hero h2 span,
-.sub h2 {
-  color: #FFB30F;
+.sub h2, .spotlight {
+  color: #ffbb29;
 }
-
-.hero button#join-btn{
+.numbers span{
+  color: orange;
+  font-weight: 1000;
+}
+.hero #join-btn{
+  text-align: center;
+  display: grid;
+  align-items: center;
+  font-weight: bolder;
+  font-size: larger;
   font-family: 'Abel', monospace;
-  background-color: #141516;
-  padding: 1rem;
+  background-color: #010d1460;
   margin: 1rem;
-  color: #088dda;
+  color: #fab727;
   box-shadow: 0px 0px 5px black;
   grid-column: 2/3;
   grid-row: 2/3;
   height: 3rem;
   max-width: 18rem;
+  animation-name: slideinbtn;
+  animation-delay: 0.01s;
+  animation-iteration-count: 1;
+  animation-duration: 1s;
+  text-decoration: none;
 }
-
+.hero #join-btn a{
+  color: inherit;
+  text-decoration: inherit;
+  width: 100%;
+}
 .sub {
   background: #042b42;
   text-align: center;
@@ -219,7 +245,6 @@ button :nth-child(2) {
 .block {
   color: gray;
   height: 15rem;
-  /* width: 85%; */
   margin: 10px;
   padding: 1rem;
   font-family: 'Abel', sans-serif;
@@ -227,7 +252,6 @@ button :nth-child(2) {
 }
 
 .placeholder-spotlights {
-
   background: #042b42;
   color: gray;
   height: fit-content;
@@ -243,13 +267,15 @@ button :nth-child(2) {
 .spotlight {
   display: grid;
       justify-items: center;
-      background: rgb(214, 238, 245);
+      background: whitesmoke;
       color: #010d14;
       width: auto;
       height: fit-content;
       padding-bottom: 1rem;
 }
-
+.spotlight img{
+  height: 50px;
+}
 .join {
   display: none;
 }
@@ -272,6 +298,8 @@ footer {
 }
 
 .second-half {
+  display: flex;
+  flex-direction: column;
   font-family: 'Inconsolata', monospace;
 }
 
@@ -281,12 +309,27 @@ footer {
 
 hr {
   width: 90%;
+  border: 1px solid #fab727;
+  background-color: #fab727;
+}
+footer hr{
+  border: 1px solid #2782fa;
+  background-color: #2782fa;
+}
+.banner #hex:hover{
+  background-color: #0101034b;
+  font-weight: bolder;
 }
 
-.hero button#join-btn:hover {
+.hero #join-btn:hover {
   transition: all 0.2s;
-  color: #FFB30F;
-  background-color: black;
+  color: #010d14;
+  background-color: #ce910f;
+  font-weight: bolder;
+  height: 3rem;
+}
+.hero #join-btn:active{
+  padding: 0.7px;
 }
 
 .event:hover {
@@ -304,14 +347,18 @@ button span:hover {
 .last-visit{
   color: #141516;
 }
-
+footer .last-visit{
+  color: whitesmoke;
+}
 .noview{
   opacity: 10%;
-  transform:translateY(20rem);
+  filter: blur(20px);
+  transform:translateY(10rem);
   transition: all 0.5s;
 }   
 .view{
   opacity: 100%;
+  filter: blur(0px);
   transform:translateY(0rem);
 }
 
@@ -346,10 +393,12 @@ main #gallery{
   padding: 1rem;
 }
 
-/* Join */
+/* Join Page*/
 #thanks{
-  font-size: 10vw;
-  text-align: center;
+  font-size: 2rem;
+  grid-row: 1/-1;
+  grid-column: 1/-1;
+ padding-left: 8rem;
 }
 .abel-text span#orange{
   color: #FFB30F;
@@ -358,20 +407,20 @@ main #gallery{
 .main-join-area{
   display: grid;
   justify-items: center;
-  width: 100vw;
-  max-width: 40rem;
 }
 form{
-  
+  animation-name: slideup;
+  animation-duration: 0.5s;
   background-color: white;
   padding: 10px;
   margin-top: 10px;
   width: 90vw;
-  box-shadow: 0 0 10px grey;
+  box-shadow: 0 0 4px grey;
 }
 
 .hy{
-  color: #ff2b0f;
+  color: rgb(36, 36, 36);
+  font-weight: bolder;
 }
 fieldset{
   border-radius: 3px;
@@ -418,7 +467,45 @@ label{
   background-color: #010d14;
 }
 /* Directory Page */
+
+
+.switch-box{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 7rem;
+  margin: 0 auto;
+  padding: 2px;
+  margin-bottom: 10px;
+}
+.switch-box img.active-switch{
+  background-color: #7e869175;
+  border-radius: 7px;
+}
+.switch-box img:hover{
+  background-color: #45494e1a;
+  border-radius: 7px;
+  transition:ease 0.5s;
+}
+
+.list-company{
+  box-shadow: none;
+  border: none;
+  font-size: smaller;
+}
+.list-company.company:nth-child(even){
+  background-color: #1315168e;
+}
+
+.list-info ul li:nth-child(3){
+  display: none;
+}
+.list-company .company-img{
+  display: none;
+}
+
 .company{
+  animation-name: slideup;
+  animation-duration: 0.5s;
   display: grid;
   justify-items: center;
   padding:2.5rem;
@@ -451,4 +538,73 @@ label{
 }
 .Bronze {
   filter: invert(42%) sepia(180%) saturate(202%) hue-rotate(0deg) brightness(119%) contrast(119%);
+}
+
+/* Contact Page */
+iframe{
+  margin: 0 auto;
+  width: 80vw;
+  animation-name: slideup;
+  animation-duration: 1.2s;
+}
+.contact-main-area{
+  grid-row: 1/-1;
+  grid-column: 1/-1;
+  margin: 0 auto;
+  display: grid;
+  align-items: center;
+}
+.contact-info, .talk{
+  animation-name: slideup;
+  animation-duration: 1.2s;
+  margin: 1rem;
+  display: grid;
+  gap: 1rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #FFB30F;
+  text-align: center;
+  font-size: larger;
+}
+.talk{
+  font-size: 1.6rem;
+}
+.contact-form{
+  box-shadow: none;
+  background-color: whitesmoke;
+}
+.contact-form input, .contact-form textarea {
+  background-color: rgba(255, 255, 255, 0.247);
+}
+.contact-form .join-btn{
+  background-color: #042b42;
+}
+.contact-form .join-btn:hover{
+  transition: all 0.3s;
+  background-color: #141516;
+  color: #fab727;
+  font-weight: bolder;
+}
+.talk{
+  
+  padding: 1.2rem;
+}
+
+@keyframes slidein{
+  from{
+      transform: translateX(10vw);
+      opacity: 0%;
+  }
+}
+@keyframes slideinbtn{
+  from{
+      transform: translateX(-30vw);
+      opacity: 0%;
+  }
+}
+
+@keyframes slideup{
+  from{
+      transform: translateY(20vh);
+      opacity: 10%;
+  }
 }
